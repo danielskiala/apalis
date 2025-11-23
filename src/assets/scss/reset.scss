@@ -1,0 +1,161 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  outline-width: solid;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  scrollbar-width: 10px;
+}
+
+html {
+  height: -webkit-fill-available;
+  scroll-behavior: smooth;
+  min-height: 100%;
+  color: var(--black_base);
+
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Raleway-Regular";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  line-height: 1.6;
+  // transition: var(--transition-ease);
+  // min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black_base);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+button {
+  list-style: none;
+  outline: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+:is(h4, h3, h2, h1, p, button) {
+  display: block;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  transition: none;
+}
+
+img {
+  max-width: 100%;
+  border: none;
+  line-height: 0;
+  display: block;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+svg {
+  width: 24px;
+  height: 24px;
+}
+
+strong {
+  font-family: "Raleway-Bold";
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Raleway-Bold";
+  font-optical-sizing: auto;
+  font-weight: 700;
+}
+
+input:-internal-autofill-selected,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+  box-shadow: 0 0 0 30px transparent inset !important;
+  font-family: "Raleway-Regular" !important;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+  background-color: #eaeaea;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[hidden] {
+  display: none;
+}
+
+[readonly] {
+  pointer-events: none;
+}
+
+.readonly {
+  background-color: #e2e2e2 !important;
+  opacity: 0.8;
+  color: #b3b2b2 !important;
+}
+
+[disabled] {
+  transition: all 0.3s;
+  opacity: 0.8;
+  cursor: not-allowed !important;
+}
+
+button[disabled] {
+  transition: all 0.3s;
+  opacity: 1;
+  border-color: transparent !important;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 27%) !important;
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+  }
+  cursor: not-allowed !important;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+}

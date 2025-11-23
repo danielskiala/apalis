@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Raleway-Regular";
+  src: local("Raleway-Regular"),
+    url("../fonts/Raleway/Raleway-Regular.woff2") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0025-00FF, U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA,
+    U+2DC, U+304, U+308, U+329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Raleway-Light";
+  src: local("Raleway-Light"),
+    url("../fonts/Raleway/Raleway-Light.woff2") format("woff");
+  font-weight: 100;
+  font-display: swap;
+  unicode-range: U+0025-00FF, U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA,
+    U+2DC, U+304, U+308, U+329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Raleway-Bold";
+  src: local("Raleway-Bold"),
+    url("../fonts/Raleway/Raleway-Bold.woff2") format("woff");
+  font-weight: 900;
+  font-display: swap;
+  unicode-range: U+0025-00FF, U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA,
+    U+2DC, U+304, U+308, U+329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Raleway-SemiBold";
+  src: local("Raleway-Bold"),
+    url("../fonts/Raleway/Raleway-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  unicode-range: U+0025-00FF, U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA,
+    U+2DC, U+304, U+308, U+329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Raleway-Black";
+  src: local("Raleway-Black"),
+    url("../fonts/Raleway/Raleway-Black.woff2") format("woff");
+  font-weight: 900;
+  font-display: swap;
+  unicode-range: U+0025-00FF, U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA,
+    U+2DC, U+304, U+308, U+329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

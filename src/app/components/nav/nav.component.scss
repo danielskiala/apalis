@@ -1,0 +1,45 @@
+@import "../../../assets/scss/_mixins.scss";
+
+.nav {
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+  z-index: 600;
+}
+
+.nav_content {
+  @include flexBet;
+  padding: 1.2rem 0;
+}
+.logo {
+  color: var(--orange_primary);
+}
+
+.links {
+  @include flex;
+  gap: 3rem;
+}
+
+.link {
+  font-family: "Raleway-SemiBold";
+  cursor: pointer;
+  color: var(--white_base);
+  opacity: 0.4;
+
+  &.active {
+    text-decoration: underline;
+    opacity: 1;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    opacity: 1;
+  }
+}
+
+.link_contact {
+  .link {
+    opacity: 1;
+    text-decoration: underline;
+  }
+}

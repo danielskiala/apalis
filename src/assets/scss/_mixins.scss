@@ -1,0 +1,449 @@
+$base-color: #ededed;
+$shine-color: #f6f6f6;
+$animation-duration: 1.6s;
+$avatar-offset: 52 + 16;
+
+@mixin background-gradient {
+  background-image: linear-gradient(
+    90deg,
+    $base-color 0px,
+    $shine-color 40px,
+    $base-color 80px
+  );
+  background-size: 600px;
+}
+
+@keyframes shine-lines {
+  0% {
+    background-position: -100px;
+  }
+
+  40%,
+  100% {
+    background-position: 140px;
+  }
+}
+
+@keyframes shine-avatar {
+  0% {
+    background-position: -100px + $avatar-offset;
+  }
+
+  40%,
+  100% {
+    background-position: 140px + $avatar-offset;
+  }
+}
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin flexMid {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexBet {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin button {
+  width: stretch;
+  width: 100%;
+  height: 48px;
+  background-color: var(--orange_primary);
+  padding: 13px 30px;
+  color: var(--white_base);
+  cursor: pointer;
+  font-family: "Raleway-Regular";
+  font-size: 1.6rem;
+  position: relative;
+  @include flexMid;
+  line-height: 0px;
+  gap: 0 10px;
+  align-items: center;
+  letter-spacing: 0.2px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.3, 1);
+  font-weight: 600;
+  box-shadow: var(--button-shadow-500);
+  border-radius: 9px;
+  transition: transform 0s ease 0s, background-color 0s ease 0s,
+    all 0.3s ease 0s;
+  .icon {
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    z-index: 10;
+    background: radial-gradient(farthest-side, var(--white_base) 94%, #0000)
+        top/3.8px 3.8px no-repeat,
+      conic-gradient(#0000 30%, var(--white_base));
+    mask: radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 3.8px),
+      var(--white_base) 0
+    );
+    -webkit-mask: radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 3.8px),
+      var(--white_base) 0
+    );
+    animation: spinner-c7wet2 0.4s infinite linear;
+    opacity: 0;
+  }
+
+  &.active {
+    span {
+      opacity: 0;
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  // &:hover {
+  //   transform: scale(0.97);
+  // }
+
+  // &:active {
+  //   transform: scale(0.88);
+  // }
+
+  &.fill_bright {
+    background: var(--button-color);
+    box-shadow: var(--box-shadow);
+    color: var(--b100-text-color);
+    &::before {
+      background: radial-gradient(farthest-side, var(--loader-color) 94%, #0000)
+          top/3.8px 3.8px no-repeat,
+        conic-gradient(#0000 30%, var(--loader-color));
+      mask: radial-gradient(farthest-side, #0000 calc(100% - 3.8px), #000 0);
+      -webkit-mask: radial-gradient(
+        farthest-side,
+        #0000 calc(100% - 3.8px),
+        #000 0
+      );
+    }
+  }
+}
+
+@mixin small-button {
+  @include flexMid;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  border-radius: 9px;
+  background: var(--secondary-bg-color);
+  box-shadow: var(--box-shadow);
+  color: var(--b100-text-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  transition: transform 0s ease 0s, background-color 0s ease 0s,
+    all 0.3s ease 0s;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  font-family: "Raleway-Bold";
+  font-size: 13px;
+}
+
+@mixin input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 15px;
+  font-size: 1.4rem;
+  background-color: var(--white_base);
+  border: 1.1px solid var(--grey_second);
+  transition: all 0.3s ease;
+  caret-color: var(--orange_primary);
+  font-family: "Raleway-Regular";
+  color: var(--black_base);
+  border-radius: 5px;
+  transition: all 0s ease 0s;
+
+  &::placeholder {
+    font-family: "Raleway-Regular";
+    color: #777777;
+  }
+
+  // &.input_error {
+  //   border-color: var(--error-red);
+  // }
+
+  // &[type="date"] {
+  // display: block;
+  // -webkit-appearance: textfield;
+  // -moz-appearance: textfield;
+  // width: 100% !important;
+  // -webkit-min-logical-width: calc(100% - 16px);
+  // color: $color_grey_third;
+  // &::-webkit-calendar-picker-indicator {
+  //   display: none;
+  // }
+
+  // &::-webkit-calendar-picker-indicator{
+  //   position:absolute;
+  //   left:0;
+  //   right:0;
+  // }
+  // }
+
+  &::-ms-reveal,
+  &::-ms-clear {
+    display: none;
+  }
+
+  input:-internal-autofill-selected,
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--orange_primary) inset !important;
+    box-shadow: 0 0 0 30px var(--orange_primary) inset !important;
+    font-family: "Raleway-Bold" !important;
+  }
+}
+
+@mixin group_form_search {
+  position: relative;
+  @include flex;
+  align-items: center;
+  width: 100%;
+  background-color: var(--green_primary);
+  border-radius: 5px;
+  .icon {
+    position: absolute;
+    left: 15px;
+    line-height: 0px;
+    svg {
+      width: 18px;
+      height: 18px;
+      color: var(--grey_primary);
+    }
+  }
+
+  input {
+    @include input;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 44px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .search_loading {
+    position: absolute;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, var(--green_second) 94%, #0000)
+        top/3.8px 3.8px no-repeat,
+      conic-gradient(#0000 30%, var(--green_second));
+    mask: radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 3.8px),
+      var(--green_second) 0
+    );
+    -webkit-mask: radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 3.8px),
+      var(--green_second) 0
+    );
+    animation: spinner-c7wet2 0.4s infinite linear;
+    opacity: 0;
+  }
+
+  &.search_active {
+    .search_loading {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin group_form_input {
+  margin-bottom: 1.5rem;
+  label {
+    font-size: 1.5rem;
+    font-family: "Raleway-Regular";
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--grey_primary);
+  }
+
+  input {
+    @include input;
+    &:focus {
+      box-shadow: 0px 0px 0px 0.2rem var(--orange_base);
+    }
+
+    &.input_error {
+      background-color: var(--red_second);
+      &:focus {
+        box-shadow: 0px 0px 0px 0.2rem var(--red_primary);
+      }
+    }
+
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+
+  .msg_error {
+    display: inline-block;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    font-family: "Raleway-Regular";
+    color: var(--red_primary);
+  }
+}
+
+@mixin group_form_radio {
+  margin-bottom: 2rem;
+  .input_radio {
+    @include flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    .label {
+      color: var(--grey_primary);
+      font-family: "Raleway-Bold";
+      font-size: 1.3rem;
+    }
+
+    input[type="radio"] {
+      appearance: none;
+      -webkit-appearance: none;
+      @include flexMid;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--grey_second);
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 5%);
+      border-radius: 100%;
+      &::after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background-color: var(--green_second);
+        border-radius: 100%;
+        opacity: 0;
+        transition: all 0.2s;
+      }
+
+      &:checked {
+        border-color: var(--green_second);
+        &::after {
+          content: "";
+          opacity: 1;
+        }
+      }
+    }
+
+    &:hover {
+      .label {
+        color: var(--black_base);
+      }
+
+      input {
+        border-color: var(--black_base);
+      }
+    }
+
+    &:has(input:checked) {
+      &:hover {
+        .label {
+          color: var(--grey_primary);
+        }
+      }
+    }
+  }
+}
+
+@mixin group_form_input_pwd {
+  @include group_form_input;
+  .input_content {
+    @include flex;
+    align-items: center;
+    position: relative;
+    .show_pwd {
+      position: absolute;
+      right: 15px;
+      cursor: pointer;
+      line-height: 0px;
+      user-select: none;
+      -webkit-user-select: none;
+      svg {
+        color: var(--grey_primary);
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    input[type="password"] {
+      padding-right: 6rem;
+      font-family: "Raleway-Black";
+      -webkit-text-security: disc;
+      &::placeholder {
+        font-family: "Raleway-Regular";
+      }
+    }
+  }
+}
+
+// @mixin btn_outline {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   color: $color_orange;
+//   border: 1px solid $color_orange;
+//   border-radius: 25px;
+//   padding: 8px 15px;
+//   font-family: "Raleway-Bold";
+// }
+
+/*************************************/
+/** Loading Form Button
+/*************************************/
+
+@keyframes dots_anim {
+  0% {
+    box-shadow: 16px 0, -16px 0;
+    background: transparent;
+  }
+
+  33% {
+    box-shadow: 16px 0, -16px 0 rgba(255, 255, 255, 0.13);
+    background: rgba(255, 255, 255, 0.13);
+  }
+
+  66% {
+    box-shadow: 16px 0 rgba(255, 255, 255, 0.13), -16px 0;
+    background: rgba(255, 255, 255, 0.13);
+  }
+}
+
+@keyframes spinner-c7wet2 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

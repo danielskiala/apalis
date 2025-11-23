@@ -1,0 +1,75 @@
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+  .contenair {
+    max-width: 970px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .contenair_shop {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .contenair {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  /***************************************/
+  /*** MARKETPLACE
+/***************************************/
+  .marketplace {
+    width: 100%;
+    .marketplace_title {
+      h2 {
+        font-size: 14px;
+        font-family: "openSans-SemiBold";
+        color: var(--section-heading-color);
+      }
+    }
+
+    .marketplace_grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(10rem, 100%), 1fr));
+      gap: 1rem;
+      margin-top: 20px;
+
+      .market_card {
+        border-radius: 10px;
+        .market_image {
+          width: 100%;
+          height: 140px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+    }
+  }
+
+  /***************************************/
+  /*** MARKETPLACE
+/***************************************/
+}
+
+@media screen and (min-width: 700px) and (max-width: 999px) {
+  .contenair {
+    max-width: 700px;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+  .contenair_shop {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 40px;
+  }
+}
