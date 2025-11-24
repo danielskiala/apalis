@@ -143,7 +143,7 @@
     border-radius: 1rem;
     img {
       width: 100%;
-      height: 560px;
+      // height: 560px;
       object-fit: cover;
     }
   }
@@ -214,13 +214,13 @@
         width: 100%;
         .benefit_items {
           @include flexCol;
-          gap: 1.5rem;
+          gap: 1.2rem;
           padding-right: 5rem;
           .benefit_item {
             @include flex;
             align-items: center;
             gap: 2rem;
-            padding: 1.6rem 0;
+            padding: 1.2rem 0;
             border-bottom: 1px solid var(--grey_second);
             .icon {
               @include flexMid;
@@ -236,7 +236,7 @@
             }
 
             .label {
-              font-size: 2.5rem;
+              font-size: 2.2rem;
               color: var(--grey_primary);
             }
           }
@@ -251,7 +251,7 @@
       img {
         border-radius: 10px;
         width: 100%;
-        height: 620px;
+        // height: 620px;
         object-fit: cover;
         object-position: bottom;
       }
@@ -274,6 +274,7 @@
       @include flexCol;
       align-items: center;
       width: 100%;
+      margin-bottom: 3rem;
       .title {
         text-align: center;
       }
@@ -284,32 +285,33 @@
       width: 100%;
       margin-top: 3rem;
       gap: 1.5rem;
-      .testimonial_card {
-        @include flexCol;
-        gap: 1rem;
-        border: 1px solid var(--grey_second);
-        padding: 1.8rem;
-        width: 25%;
-        flex-shrink: 0;
-        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.039);
-        .testi_head {
-          p {
-            font-family: "Raleway-Bold";
-            font-size: 1.6rem;
-          }
-        }
+    }
 
-        .testi_body {
-          p {
-            font-size: 1.5rem;
-            font-style: italic;
-          }
+    .testimonial_card {
+      @include flexCol;
+      gap: 1rem;
+      border: 1px solid var(--grey_second);
+      padding: 1.8rem;
+      width: 100%;
+      flex-shrink: 0;
+      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.039);
+      .testi_head {
+        p {
+          font-family: "Raleway-Bold";
+          font-size: 1.6rem;
         }
+      }
 
-        .testi_post {
-          p {
-            font-size: 1.4rem;
-          }
+      .testi_body {
+        p {
+          font-size: 1.5rem;
+          font-style: italic;
+        }
+      }
+
+      .testi_post {
+        p {
+          font-size: 1.4rem;
         }
       }
     }

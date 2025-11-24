@@ -131,7 +131,7 @@
 <div class="about p_top_bottom" id="about">
   <div class="about_content container">
     <div class="about_image">
-      <img src="../../../assets/images/0.png" alt="" />
+      <img src="../../../assets/images/11.png" alt="" />
     </div>
 
     <div class="about_info">
@@ -631,7 +631,7 @@
       </div>
     </div>
     <div class="benefit_image">
-      <img src="../../../assets/images/3.png" alt="" />
+      <img src="../../../assets/images/9.png" alt="" />
     </div>
   </div>
 </div>
@@ -650,7 +650,30 @@
       </div>
     </div>
 
-    <div class="testimonials_cards">
+    <swiper-container #swiper init="false">
+      @for (item of [1,2,3,4,5,6,7]; track $index) {
+      <swiper-slide>
+        <div class="testimonial_card">
+          <div class="testi_head">
+            <p>Syrian Arab Republic</p>
+          </div>
+          <div class="testi_body">
+            <p>
+              ago studied found happened anything driving recall compound fewer
+              peace face motor thirty vote prize whenever somehow fresh build he
+              courage police leave shall
+            </p>
+          </div>
+
+          <div class="testi_post">
+            <p>CEO of Log</p>
+          </div>
+        </div>
+      </swiper-slide>
+      }
+    </swiper-container>
+
+    <!-- <div class="testimonials_cards">
       <div class="testimonial_card">
         <div class="testi_head">
           <p>Syrian Arab Republic</p>
@@ -731,7 +754,7 @@
           <p>CEO of Log</p>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 
