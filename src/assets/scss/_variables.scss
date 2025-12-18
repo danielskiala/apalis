@@ -1,4 +1,23 @@
 :root {
+  --test-color: rgba(245, 92, 9, 0.299);
+  --banner_orange: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.573),
+    rgba(245, 92, 9, 0.237)
+  );
+
+  --banner_blue: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.573),
+    rgba(24, 154, 205, 0.237)
+  );
+  --banner_green: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.573),
+    rgba(112, 171, 57, 0.237)
+  );
+
+  --banner_linear: var(--banner_orange);
   --white_base: #ffffff;
   --green_base: #71ab39;
   --green_primary: #f5f9f3;
@@ -12,6 +31,7 @@
   --grey_four: #e6e6e6;
   --grey_five: #c4c4c4;
   --grey_six: #f1f3f1;
+  --grey_seven: #f7f8fa;
   --orange_primary: #f55c09;
   --orange_second: #fffaf1;
   --red_primary: #ec4242;
@@ -23,4 +43,16 @@
     0px 39.0082px 46.3731px rgba(47, 50, 69, 0.12),
     0px 23.3274px 24.7933px rgba(47, 50, 69, 0.103),
     0px 12.9302px 13.8989px rgba(47, 50, 69, 0.088);
+
+  &.blue {
+    --orange_primary: var(--blue_base);
+    --orange_second: var(--blue_primary);
+    --banner_linear: var(--banner_blue);
+  }
+
+  &.green {
+    --orange_primary: var(--green_second);
+    --orange_second: var(--green_primary);
+    --banner_linear: var(--banner_green);
+  }
 }

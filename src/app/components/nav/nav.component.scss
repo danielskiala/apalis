@@ -9,14 +9,21 @@
 
 .nav_content {
   @include flexBet;
+  align-items: center;
   padding: 1.2rem 0;
 }
+
 .logo {
   color: var(--orange_primary);
+  h2 {
+    font-family: "Raleway-Black";
+    letter-spacing: 0.2rem;
+  }
 }
 
 .links {
   @include flex;
+  align-items: center;
   gap: 3rem;
 }
 
@@ -41,5 +48,104 @@
   .link {
     opacity: 1;
     text-decoration: underline;
+  }
+}
+
+.link_btn {
+  padding: 0.8rem 1.2rem;
+  background-color: var(--orange_primary);
+  color: var(--white_base);
+  border-radius: 0.6rem;
+  font-size: 1.4rem;
+  font-family: "Raleway-SemiBold";
+}
+
+.links_mobile {
+  display: none;
+}
+
+.toggle {
+  display: none;
+}
+
+@media screen and (max-width: 999px) {
+  .nav_content {
+    padding: 2rem;
+    .link_btn,
+    .links {
+      display: none;
+    }
+  }
+
+  .toggle {
+    display: block;
+    color: var(--white_base);
+  }
+
+  .links_mobile {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--black_base);
+    transform: translateX(-200%);
+    transition: all 0.5s;
+    .cancel {
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      z-index: 100;
+      color: var(--white_base);
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0px;
+      background-color: rgba(0, 0, 0, 0.678);
+      width: 100%;
+      height: 100%;
+    }
+
+    .links_content {
+      @include flexCol;
+      position: absolute;
+      width: 320px;
+      height: 100%;
+      background-color: var(--white_base);
+      gap: 0;
+      .links {
+        @include flexCol;
+        gap: 0;
+      }
+
+      .link {
+        display: block;
+        width: 100%;
+        color: var(--black_base);
+        opacity: 1;
+        padding: 1.2rem 2rem;
+      }
+    }
+
+    .link_contact {
+      margin-top: 3rem;
+      padding: 0 2rem;
+    }
+
+    .link_btn {
+      padding: 0.8rem 1.2rem;
+      background-color: var(--orange_primary);
+      color: var(--white_base);
+      border-radius: 0.6rem;
+      font-size: 1.4rem;
+      font-family: "Raleway-SemiBold";
+    }
+
+    &.active {
+      transform: translateX(0%);
+    }
   }
 }

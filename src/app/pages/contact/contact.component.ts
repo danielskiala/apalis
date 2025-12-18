@@ -2,48 +2,31 @@ import {
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
   ElementRef,
-  inject,
   OnInit,
   signal,
   ViewChild,
 } from '@angular/core';
-import { NavComponent } from '../../components/nav/nav.component';
 import { register, SwiperContainer } from 'swiper/element';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import { SwiperOptions } from 'swiper/types';
-import { Router } from '@angular/router';
+import { NavComponent } from '../../components/nav/nav.component';
 register();
+
 @Component({
-  selector: 'app-home',
+  selector: 'app-contact',
   standalone: true,
   imports: [NavComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.scss',
 })
-export class HomeComponent implements OnInit {
-  @ViewChild('video') video: ElementRef<HTMLVideoElement>;
+export class ContactComponent implements OnInit {
   @ViewChild('swiper') swiper: ElementRef<any>;
   swiperElement = signal<SwiperContainer | null>(null);
-  router = inject(Router);
 
   status_video: boolean;
   constructor() {}
   ngOnInit() {}
-
-  gotoContact() {
-    this.router.navigate(['/contact']);
-  }
-
-  startVideoBanner() {
-    if (!this.video.nativeElement.paused) {
-      this.video.nativeElement.pause();
-      this.status_video = true;
-    } else {
-      this.status_video = false;
-      this.video.nativeElement.play();
-    }
-  }
 
   changeTheme(theme: string) {
     // window.scrollTo(0, 0);

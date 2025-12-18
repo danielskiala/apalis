@@ -11,10 +11,372 @@
     padding: 0 20px;
   }
 
-  .contenair {
+  .container {
     max-width: 100%;
     width: 100%;
     padding: 0 20px;
+  }
+
+  .title_circle {
+    margin: 0 auto 1.5rem;
+  }
+
+  .title {
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      line-height: 1.3;
+    }
+  }
+
+  .p_top_bottom {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  /***********************************************/
+  /***** BANNER
+  /***********************************************/
+  .banner {
+    position: relative;
+    height: auto;
+
+    .banner_content {
+      position: relative;
+      width: 100%;
+      padding-top: 2rem;
+      padding-bottom: 6rem;
+      @include flexCol;
+      align-items: center;
+      gap: 2rem;
+      .slogan {
+        width: 100%;
+        color: var(--white_base);
+        h1 {
+          font-family: "Raleway-Black";
+          font-size: 3rem;
+          line-height: 1.3;
+          span {
+            color: var(--orange_primary);
+          }
+        }
+        p {
+          margin-top: 2rem;
+          font-size: 1.7rem;
+        }
+      }
+
+      .banner_form {
+        width: 100%;
+        position: relative;
+        margin: 0;
+        bottom: 0;
+      }
+
+      .banner_form_title {
+        p {
+          font-family: "Raleway-SemiBold";
+          font-size: 2.2rem;
+        }
+      }
+
+      .banner_form_card {
+        width: 100%;
+        .group_form {
+          width: 100%;
+          position: relative;
+          @include flex;
+          align-items: center;
+          padding: 0 1.5rem;
+          input {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            background: transparent;
+            border-width: 1.5px;
+            padding-left: 5rem;
+            border-radius: 1rem;
+            padding-top: 1.4rem;
+            padding-bottom: 1.4rem;
+            color: var(--white_base);
+            caret-color: var(--white_base);
+            border-color: rgba(255, 255, 255, 0.5);
+            &::placeholder {
+              color: var(--white_base);
+            }
+          }
+
+          .icon {
+            line-height: 0px;
+            svg {
+              opacity: 0.7;
+            }
+          }
+        }
+
+        .form_btn {
+          margin-top: 3rem;
+          button {
+            font-family: "Raleway-SemiBold";
+            height: 40px;
+          }
+        }
+      }
+    }
+
+    .btn_play {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      z-index: 400;
+      cursor: pointer;
+      color: var(--white_base);
+      .icon {
+        svg {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+  }
+
+  /***********************************************/
+  /***** ABOUT
+  /***********************************************/
+  .about {
+    width: 100%;
+
+    .about_content {
+      flex-wrap: wrap;
+      gap: 5rem;
+    }
+
+    .about_image {
+      width: 100%;
+    }
+
+    .about_info {
+      width: 100%;
+    }
+  }
+
+  /***********************************************/
+  /***** BENEFIT
+  /***********************************************/
+  .benefit {
+    width: 100%;
+    .benefit_content {
+      flex-wrap: wrap;
+      .benefit_card {
+        width: 100%;
+        .benefit_body {
+          width: 100%;
+          .benefit_items {
+            gap: 1.2rem;
+            padding-right: 4rem;
+            .benefit_item {
+              gap: 1.2rem;
+              padding: 1.4rem 0;
+
+              .label {
+                font-size: 1.7rem;
+              }
+            }
+          }
+        }
+      }
+
+      .benefit_image {
+        width: 100%;
+      }
+    }
+  }
+
+  /***********************************************/
+  /***** TESTIMONIALS
+  /***********************************************/
+  .testimonials {
+    width: 100%;
+    overflow: hidden;
+    .testimonial_content {
+      width: 100%;
+    }
+  }
+
+  /***********************************************/
+  /***** BEFORE FOOTER
+  /***********************************************/
+  .before_footer {
+    width: 100%;
+    height: 50dvh;
+    align-items: center;
+
+    .before_footer_content {
+      @include flexMid;
+      @include flexCol;
+      align-items: center;
+      z-index: 300;
+    }
+
+    .before_footer_text {
+      text-align: center;
+      padding: 0rem;
+      @include flexCol;
+      width: 100%;
+      gap: 2rem;
+
+      p {
+        font-family: "Raleway-SemiBold";
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+
+      span {
+        font-size: 1.4rem;
+      }
+    }
+
+    .before_footer_btn {
+      .form_btn {
+        button {
+          font-size: 1.6rem;
+          height: 37px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    background-color: var(--black_base);
+    color: var(--white_base);
+    a {
+      color: var(--white_base);
+    }
+
+    .footer_content {
+      padding: 3rem 2rem;
+    }
+
+    .footer_cards {
+      width: 100%;
+      @include flexBet;
+      flex-wrap: wrap;
+      .footer_card {
+        width: 100%;
+        .footer_head {
+          margin-bottom: 1.2rem;
+        }
+      }
+
+      .footer_link {
+        @include flexCol;
+        gap: 1rem;
+        a {
+          color: var(--white_base) !important;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .footer_socials {
+        @include flex;
+        align-items: center;
+        gap: 1rem;
+        .icon {
+          svg {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+
+    .footer_card_copy {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  /***********************************************/
+  /***** CONTACT
+ /***********************************************/
+  .contact {
+    width: 100%;
+    .contact_content {
+      width: 100%;
+      .contact_wrapper {
+        width: 100%;
+        flex-direction: column-reverse;
+        padding: 1.5rem;
+        gap: 2rem;
+        position: relative;
+        .contact_info {
+          width: 100%;
+          position: relative;
+
+          h2 {
+            font-size: 3rem;
+            line-height: 1.4;
+          }
+
+          .contact_items {
+            margin-top: 2rem;
+            width: 100%;
+            @include flexCol;
+            gap: 1.2rem;
+            .contact_item {
+              @include flex;
+              align-items: center;
+              gap: 0.8rem;
+              .icon {
+                align-self: start;
+                line-height: 0px;
+              }
+
+              .label {
+                font-size: 1.5rem;
+                font-family: "Raleway-Regular";
+              }
+            }
+          }
+
+          .contact_other {
+            @include flexCol;
+            gap: 1.2rem;
+            .c_o {
+              @include flex;
+              align-items: center;
+              gap: 1rem;
+              .icon {
+                line-height: 0px;
+                svg {
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+            }
+          }
+        }
+
+        .contact_form {
+          width: 100%;
+          .contact_services {
+            @include flex;
+            gap: 1rem;
+            .sr {
+              @include flexMid;
+              align-items: center;
+              border: 1px solid var(--grey_four);
+              border-radius: 1000px;
+              font-size: 0.9rem;
+              text-align: center;
+              padding: 0.8rem 0.4rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

@@ -1,0 +1,16 @@
+@import "../../../assets/scss/variables";
+::ng-deep {
+  body {
+    background-color: var(--grey_seven);
+  }
+
+  .link {
+    color: var(--black_base) !important;
+  }
+
+  @media screen and (max-width: 999px) {
+    .toggle {
+      color: var(--black_base) !important;
+    }
+  }
+}

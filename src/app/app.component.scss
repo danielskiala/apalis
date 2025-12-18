@@ -1,0 +1,26 @@
+@import "../assets/scss/mixins";
+.btn_to_top {
+  position: fixed;
+  bottom: 50px;
+  right: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: var(--orange_primary);
+  cursor: pointer;
+  @include flexMid;
+  align-items: center;
+  color: var(--white_base);
+  z-index: 500;
+  transform: translateX(200%);
+  transition: all 0.3s;
+  &.active {
+    transform: translateX(0%);
+  }
+
+  .icon {
+    display: block;
+    line-height: 0px;
+    transform: rotate(-180deg);
+  }
+}
