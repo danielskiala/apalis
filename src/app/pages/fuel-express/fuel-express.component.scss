@@ -1,0 +1,368 @@
+@import "../../../assets/scss/mixins";
+
+::ng-deep {
+  body {
+    background-color: #f9f9f9 !important;
+  }
+}
+
+.banner {
+  &::after {
+    content: "";
+    background: var(--banner_green);
+  }
+}
+
+.banner_fuelexpress {
+  position: relative;
+  // top: 0;
+  // left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url("../../../assets/images/banner_1.png") no-repeat;
+  background-size: cover;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.fuel_express_section {
+  width: 100%;
+}
+
+.fuel_express_section_content {
+  width: 100%;
+  margin-top: 20px;
+  @include flex;
+  gap: 2rem;
+
+  &.fuel_app_pro {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .fuel_text {
+    width: 45%;
+
+    &.fuel_app_box {
+      width: 50%;
+    }
+
+    &.fuel_app_feature_text {
+      width: 45%;
+    }
+  }
+
+  .fuel_image {
+    width: 55%;
+    border: 1px solid #f9f9f9;
+  }
+
+  .app_pro_image {
+    width: 40%;
+    img {
+      width: 100%;
+      height: 420px;
+    }
+  }
+
+  &.reverse_flex {
+    flex-direction: row-reverse;
+  }
+}
+
+.title {
+  color: var(--green_100);
+}
+
+.sub_title {
+  font-size: 2rem;
+  font-family: "Raleway-Bold";
+  color: var(--green_second);
+  margin: 1rem 0;
+}
+
+.fuel_apps {
+  @include flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 50%;
+  .fuel_app {
+    @include flex;
+    flex-shrink: 0;
+    width: 48%;
+    gap: 1rem;
+    .fuel_app_text {
+      width: 95%;
+      font-size: 1.4rem;
+      .name_app {
+        font-size: 1.5rem;
+        font-family: "Raleway-Bold";
+      }
+    }
+  }
+}
+
+.p_top_bottom {
+  padding: 5rem 0;
+}
+
+.fuel_image_pizza {
+  width: 60%;
+  background: url("../../../assets/images/pizza.webp") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  height: 680px;
+  transform: translateY(-100px);
+}
+
+.pizza_section {
+  width: 100%;
+  justify-content: space-between;
+  .fuel_express_section_content {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.fuel_express_pro {
+  width: 100%;
+  margin-top: -100px;
+  background: url("../../../assets/images/6.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.785);
+  }
+
+  .fuel_express_pro_content {
+    @include flexCol;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 10;
+    color: var(--white_base);
+  }
+
+  .header {
+    @include flex;
+    align-items: center;
+    gap: 1rem;
+    img {
+      background-color: var(--white_base);
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 9px;
+    }
+
+    p {
+      font-size: 2rem;
+      font-family: "Raleway-Bold";
+    }
+  }
+
+  .body {
+    width: 60%;
+    h1 {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.fuel_app_feature_box {
+  width: 50%;
+  .fuel_app_feature_head {
+    @include flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    h3 {
+      font-size:3rem;
+      font-family: "Raleway-Black";
+      color: #2164b2;
+    }
+  }
+}
+
+.fuel_app_features {
+  @include flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  .feature_card {
+    width: calc(50% - 1rem);
+    height: 130px;
+    padding: 1rem;
+    color: var(--white_base);
+    font-family: "Raleway-Regular";
+    border-radius: 0.5rem;
+    background: url("../../../assets/images/banner_1.png");
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      // background-color: rgba(0, 0, 0, 0.842);
+      background: linear-gradient(
+        to bottom,
+        var(--blue_base) 10%,
+        rgba(0, 0, 0, 0.662)
+      );
+    }
+
+    .number {
+      font-size: 2.3rem;
+      font-family: "Raleway-black";
+      position: relative;
+      z-index: 10;
+    }
+
+    p {
+      position: relative;
+      z-index: 10;
+      text-transform: lowercase;
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .banner {
+    width: 100%;
+    height: 420px;
+  }
+
+  .banner_fuelexpress {
+    position: relative;
+    // top: 0;
+    // left: 0;
+    width: 100%;
+    height: 80vh;
+    // background: url("../../../assets/images/banner.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .title {
+    h1 {
+      text-align: left !important;
+    }
+  }
+
+  .fuel_express_section_content {
+    @include flex;
+    flex-wrap: wrap;
+    .fuel_text {
+      width: 100%;
+      &.fuel_app_box {
+        width: 100%;
+      }
+    }
+
+    .fuel_image {
+      width: 100%;
+    }
+
+    .fuel_app_feature_text {
+      width: 100% !important;
+    }
+
+    &.reverse_flex {
+      flex-direction: row-reverse;
+    }
+
+    &.fuel_app_pro {
+      flex-direction: column-reverse !important;
+      .fuel_app_feature_box {
+        width: 100%;
+      }
+
+      .fuel_app_features {
+        width: 100%;
+        .feature_card {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .fuel_apps {
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    .fuel_app {
+      @include flex;
+      flex-shrink: 0;
+      width: 100%;
+      gap: 1rem;
+      .fuel_app_text {
+        width: 100%;
+      }
+    }
+  }
+
+  .p_top_bottom {
+    padding: 3rem 0 !important;
+  }
+
+  .fuel_image_pizza {
+    width: 100%;
+    position: relative;
+    background: url("../../../assets/images/pizza.webp") no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 320px;
+    transform: none;
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+
+  .pizza_section {
+    width: 100%;
+    // background-color: red;
+    justify-content: space-between;
+    .fuel_express_section_content {
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+      // background-color:blue;
+    }
+  }
+
+  .fuel_express_pro {
+    margin: 0;
+    .body {
+      width: 100%;
+    }
+  }
+
+  .fuel_app_feature_text {
+    width: 100%;
+  }
+}

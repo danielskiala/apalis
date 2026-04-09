@@ -1,26 +1,36 @@
-<nav class="nav">
+<nav class="nav" [class.nav_fuel_express]="fuel_express()">
   <div class="nav_content container">
-    <div class="logo">
-      <h2>Apalis</h2>
-    </div>
+    @if (fuel_express()) {
+      <div class="logo">
+        <img src="../../../assets/images/fuel-express.png" alt="" />
+      </div>
+    } @else {
+      <div class="logo">
+        <h2>Apalis</h2>
+      </div>
+    }
+
     @if (!contact_page) {
-    <div class="links">
-      <a routeLink="." fragment="home" class="link">Accueil</a>
-      <a routerLink="." fragment="about" class="link">À propos</a>
-      <a routerLink="." fragment="services" class="link">Services</a>
-      <a routerLink="/contact" routerLinkActive="active" class="link"
-        >Contactez-nous</a
-      >
-    </div>
-    } @if (contact_page) {
-    <div class="links">
-      <a href="#home" fragment="home" class="link">Accueil</a>
-      <a href="#about" fragment="about" class="link">À propos</a>
-      <a href="#services" fragment="services" class="link">Services</a>
-      <a routerLink="/contact" routerLinkActive="active" class="link"
-        >Contactez-nous</a
-      >
-    </div>
+      <div class="links">
+        <a routeLink="." fragment="home" class="link">Accueil</a>
+        <a routerLink="." fragment="about" class="link">À propos</a>
+        <a routerLink="/services" class="link">Services</a>
+        <a routerLink="/fuel-express" class="link">Fuel'Express</a>
+        <a routerLink="/contact" routerLinkActive="active" class="link"
+          >Contactez-nous</a
+        >
+      </div>
+    }
+
+    @if (contact_page) {
+      <div class="links">
+        <a href="#home" fragment="home" class="link">Accueil</a>
+        <a href="#about" fragment="about" class="link">À propos</a>
+        <a routerLink="/services"  class="link">Services</a>
+        <a routerLink="/contact" routerLinkActive="active" class="link"
+          >Contactez-nous</a
+        >
+      </div>
     }
 
     <div class="link_contact">
@@ -84,24 +94,29 @@
 
     <div class="links_content">
       @if (!contact_page) {
-      <div class="links">
-        <a href="#home" class="link">Accueil</a>
-        <a href="#about" class="link">À propos</a>
-        <a href="#services" class="link">Services</a>
-        <a routerLink="/contact" routerLinkActive="active" class="link"
-          >Contactez-nous</a
-        >
-      </div>
-      } @if (contact_page) {
-      <div class="links">
-        <a href="#home" fragment="home" class="link">Accueil</a>
-        <a href="#about" fragment="about" class="link">À propos</a>
-        <a href="#services" fragment="services" class="link">Services</a>
-        <a routerLink="/contact" routerLinkActive="active" class="link"
-          >Contactez-nous</a
-        >
-      </div>
+        <div class="links">
+          <a href="#home" class="link">Accueil</a>
+          <a href="#about" class="link">À propos</a>
+          <a routerLink="/services" class="link">Services</a>
+          <a routerLink="/fuel-express" class="link">Fuel'Express</a>
+          <a routerLink="/contact" routerLinkActive="active" class="link"
+            >Contactez-nous</a
+          >
+        </div>
       }
+
+      @if (contact_page) {
+        <div class="links">
+          <a href="#home" fragment="home" class="link">Accueil</a>
+          <a href="#about" fragment="about" class="link">À propos</a>
+          <a routerLink="/services" fragment="services" class="link">Services</a>
+          <a routerLink="/fuel-express" class="link">Fuel'Express</a>
+          <a routerLink="/contact" routerLinkActive="active" class="link"
+            >Contactez-nous</a
+          >
+        </div>
+      }
+
       <div class="link_contact">
         <a href="" class="link_btn"> Se connecter </a>
       </div>
