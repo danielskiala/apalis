@@ -161,6 +161,16 @@
     gap: 5rem;
   }
 
+  .about_text {
+    a {
+      font-family: "Raleway-SemiBold";
+      color: var(--green_second);
+      &:hover{
+        text-decoration:underline;
+      }
+    }
+  }
+
   .about_image {
     width: 40%;
     overflow: hidden;
@@ -471,6 +481,26 @@
 
       .footer_head {
         margin-bottom: 1.2rem;
+      }
+
+      .footer_badge_download {
+        margin-top:1rem;
+        .badge_download_title {
+          p {
+            font-size: 1.6rem;
+          }
+        }
+
+        .badge_download_content {
+          @include flex;
+          gap: 1rem;
+          margin-top:1rem;
+          a {
+            img {
+              width: 120px;
+            }
+          }
+        }
       }
     }
 

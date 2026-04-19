@@ -1,68 +1,16 @@
-<!-- <div class="banner_fuelexpress">
-  <div class="banner_content"></div>
-</div> -->
-
 <!-- BANNER -->
 <!-- BANNER -->
 <app-nav [fuel_express]="true" [contact_page]="true"></app-nav>
 <div class="banner" id="home">
   <!-- <app-nav></app-nav> -->
   <video
-    src="../../../assets/images/truck_tank_1.mov"
+    src="../../../assets/images/fuel-express.mp4"
     #video
     [autoplay]="true"
     [muted]="true"
     [playsInline]="true"
     loop
   ></video>
-  <!-- <div class="banner_content container">
-    <div class="slogan">
-      <h1>
-        Développez votre entreprise. <span>Nous prenons en charge</span> toute
-        votre logistique.
-      </h1>
-      <p>
-        Concentrez-vous sur la croissance de votre entreprise pendant que nous
-        gérons votre approvisionnement, de la planification à la livraison, avec
-        des solutions fiables, sécurisées et efficaces, adaptées à vos besoins,
-        afin d’assurer la continuité de vos activités et votre tranquillité
-        d’esprit.
-      </p>
-    </div>
-
-    <div class="banner_form">
-      <div class="banner_form_title">
-        <p>Suivre le camion</p>
-      </div>
-
-      <div class="banner_form_card">
-        <div class="group_form">
-          <span class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24" fill="none"
-              xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="currentColor">
-              <path
-                d="M10.0808 2C5.47023 2.9359 2 7.01218 2 11.899C2 17.4776 6.52238 22 12.101 22C16.9878 22 21.0641 18.5298 22 13.9192"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-              <path
-                d="M18.9375 18C19.3216 17.9166 19.6771 17.784 20 17.603M14.6875 17.3406C15.2831 17.6015 15.8576 17.7948 16.4051 17.9218M10.8546 14.9477C11.2681 15.238 11.71 15.5861 12.1403 15.8865M3 13.825C3.32234 13.6675 3.67031 13.4868 4.0625 13.3321M6.45105 13C7.01293 13.0624 7.64301 13.2226 8.35743 13.5232"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path
-                d="M18 7.5C18 6.67157 17.3284 6 16.5 6C15.6716 6 15 6.67157 15 7.5C15 8.32843 15.6716 9 16.5 9C17.3284 9 18 8.32843 18 7.5Z"
-                stroke="currentColor" stroke-width="1.5"></path>
-              <path
-                d="M17.488 13.6202C17.223 13.8638 16.8687 14 16.5001 14C16.1315 14 15.7773 13.8638 15.5123 13.6202C13.0855 11.3756 9.83336 8.86815 11.4193 5.2278C12.2769 3.25949 14.3353 2 16.5001 2C18.6649 2 20.7234 3.25949 21.5809 5.2278C23.1649 8.86356 19.9207 11.3833 17.488 13.6202Z"
-                stroke="currentColor" stroke-width="1.5"></path>
-            </svg>
-          </span>
-          <input type="text" placeholder="Entrez le code votre de livraison" />
-        </div>
-
-        <div class="form_btn">
-          <button>Suivre le camion</button>
-        </div>
-      </div>
-    </div>
-    </div> -->
 
   <button class="btn_play" (click)="startVideoBanner()">
     <span class="icon">
@@ -153,7 +101,7 @@
 </div>
 
 <div class="fuel_express_section p_top_bottom">
-  <div class="fuel_express_section_content container">
+  <div class="fuel_express_section_content section_smart_camion container">
     <div class="fuel_text">
       <div class="title">
         <h1>Nos camions citernes intelligents</h1>
@@ -170,8 +118,9 @@
         supérieurs à 1 000 litres.
       </p>
     </div>
-    <div class="fuel_image">
-      <img src="../../../assets/images/truck-1.png" alt="" />
+    
+    <div class="fuel_image smart_camion">
+      <img src="../../../assets/images/13.png" alt="" />
     </div>
   </div>
 </div>
@@ -387,141 +336,4 @@
 
 <!-- FOOTER -->
 <!-- FOOTER -->
-<div class="footer">
-  <div class="footer_content container">
-    <div class="footer_cards">
-      <div class="footer_card">
-        <div class="footer_head">
-          <div class="logo">
-            <h2>Apalis</h2>
-            <p>
-              Apalis SARL est une entreprise spécialisée dans
-              l’approvisionnement en carburant. Nous aidons les entreprises et
-              institutions à garantir un approvisionnement fiable, sûr et
-              continu, essentiel au bon fonctionnement de leurs activités.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer_card">
-        <div class="footer_head">
-          <h2>Nos liens</h2>
-        </div>
-
-        <div class="footer_link">
-          <a href="#home" class="link active">Accueil</a>
-          <a href="#about" class="link">À propos</a>
-          <a href="#services" class="link">Services</a>
-        </div>
-      </div>
-
-      <div class="footer_card">
-        <div class="footer_head">
-          <h2>Nos réseaux</h2>
-        </div>
-
-        <div class="footer_socials">
-          <a href="https://web.facebook.com/profile.php?id=61584364574664">
-            <span class="icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="128"
-                height="128"
-                viewBox="0 0 24 24"
-                fill="none"
-                class="injected-svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                role="img"
-                color="currentColor"
-              >
-                <path
-                  d="M15.9217 6.75149C15.0461 6.75141 14.2675 6.75135 13.6389 6.83589C12.9557 6.92778 12.2658 7.13966 11.7019 7.70369C11.138 8.26772 10.9262 8.95784 10.8344 9.6413C10.7499 10.2701 10.7499 11.049 10.75 11.9248L10.75 12.7534H10C9.30964 12.7534 8.75 13.3132 8.75 14.0038C8.75 14.6943 9.30964 15.2542 10 15.2542H10.75V21.2516C10.75 21.7259 10.75 21.963 10.6013 22.1099C10.4526 22.2568 10.2173 22.2538 9.7467 22.2478C8.55726 22.2328 7.54575 22.1911 6.68802 22.0757C5.31137 21.8906 4.21911 21.5034 3.36091 20.6449C2.50272 19.7865 2.11568 18.6939 1.93059 17.3168C1.74998 15.9729 1.74999 14.2517 1.75 12.0603V11.9459C1.74999 9.75456 1.74998 8.03332 1.93059 6.68949C2.11568 5.3124 2.50272 4.2198 3.36091 3.36133C4.21911 2.50286 5.31137 2.1157 6.68802 1.93056C8.03143 1.74989 9.75214 1.7499 11.9428 1.74991H12.0572C14.2479 1.7499 15.9686 1.74989 17.312 1.93056C18.6886 2.1157 19.7809 2.50286 20.6391 3.36133C21.4973 4.2198 21.8843 5.31239 22.0694 6.68949C22.25 8.03332 22.25 9.75457 22.25 11.9459V12.0604C22.25 14.2517 22.25 15.9729 22.0694 17.3168C21.8843 18.6939 21.4973 19.7865 20.6391 20.6449C19.7809 21.5034 18.6886 21.8906 17.312 22.0757C16.4543 22.1911 15.4427 22.2328 14.2533 22.2478C13.7827 22.2538 13.5474 22.2568 13.3987 22.1099C13.25 21.963 13.25 21.7259 13.25 21.2516V15.2542H15C15.6904 15.2542 16.25 14.6943 16.25 14.0038C16.25 13.3132 15.6904 12.7534 15 12.7534H13.25V12.0031C13.25 11.0247 13.2527 10.4166 13.3121 9.97452C13.3657 9.57548 13.4449 9.49666 13.4685 9.47322L13.4697 9.47202L13.4709 9.47081C13.4943 9.44725 13.5731 9.36802 13.972 9.31437C14.414 9.25493 15.0219 9.25228 16 9.25228H17C17.6904 9.25228 18.25 8.69246 18.25 8.00188C18.25 7.31131 17.6904 6.75149 17 6.75149L15.9217 6.75149Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </span>
-          </a>
-          <a href="https://x.com/apalisarl?s=21">
-            <span class="icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="128"
-                height="128"
-                viewBox="0 0 24 24"
-                fill="none"
-                class="injected-svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                role="img"
-                color="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM5.93936 17.0001L7.00002 18.0608L11.1012 13.9596L13.8388 17.7501H18.4668L13.7884 11.2723L18.0607 7.00011L17 5.93945L12.8989 10.0406L10.1613 6.25011H5.5332L10.2116 12.7279L5.93936 17.0001Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </span>
-          </a>
-          <a href="https://www.instagram.com/apalis.sarl?igsh=cGM1MTUzeHlyanFw">
-            <span class="icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="128"
-                height="128"
-                viewBox="0 0 24 24"
-                fill="none"
-                class="injected-svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                role="img"
-                color="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12.0572 1.75H12.0572C14.2479 1.74999 15.9686 1.74998 17.312 1.93059C18.6886 2.11568 19.7809 2.50271 20.6391 3.36091C21.4973 4.21911 21.8843 5.31137 22.0694 6.68802C22.25 8.03144 22.25 9.7521 22.25 11.9428V11.9428V12.0572V12.0572C22.25 14.2479 22.25 15.9686 22.0694 17.312C21.8843 18.6886 21.4973 19.7809 20.6391 20.6391C19.7809 21.4973 18.6886 21.8843 17.312 22.0694C15.9686 22.25 14.2479 22.25 12.0572 22.25H12.0572H11.9428H11.9428C9.7521 22.25 8.03144 22.25 6.68802 22.0694C5.31137 21.8843 4.21911 21.4973 3.36091 20.6391C2.50272 19.7809 2.11568 18.6886 1.93059 17.312C1.74998 15.9686 1.74999 14.2479 1.75 12.0572V11.9428C1.74999 9.75212 1.74998 8.03144 1.93059 6.68802C2.11568 5.31137 2.50272 4.21911 3.36091 3.36091C4.21911 2.50271 5.31137 2.11568 6.68802 1.93059C8.03143 1.74998 9.7521 1.74999 11.9428 1.75H11.9428H12.0572ZM16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12ZM17.5123 7.5C18.0621 7.5 18.5078 7.05229 18.5078 6.5C18.5078 5.94772 18.0621 5.5 17.5123 5.5H17.5033C16.9535 5.5 16.5078 5.94772 16.5078 6.5C16.5078 7.05228 16.9535 7.5 17.5033 7.5H17.5123Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </span>
-          </a>
-          <a href="https://www.linkedin.com/company/apalis-sarl/">
-            <span class="icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="128"
-                height="128"
-                viewBox="0 0 24 24"
-                fill="none"
-                class="injected-svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                role="img"
-                color="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M4.5 1.75C2.98122 1.75 1.75 2.98122 1.75 4.5L1.75 19.5C1.75 21.0188 2.98122 22.25 4.5 22.25L19.5 22.25C21.0188 22.25 22.25 21.0188 22.25 19.5L22.25 4.5C22.25 2.98122 21.0188 1.75 19.5 1.75L4.5 1.75ZM8.25898 6.36914C8.25898 7.0595 7.69934 7.61914 7.00898 7.61914H7C6.30964 7.61914 5.75 7.0595 5.75 6.36914C5.75 5.67878 6.30964 5.11914 7 5.11914H7.00898C7.69934 5.11914 8.25898 5.67878 8.25898 6.36914ZM7.00117 8.5C7.55345 8.5 8.00117 8.94772 8.00117 9.5L8.00117 17C8.00117 17.5523 7.55345 18 7.00117 18C6.44888 18 6.00117 17.5523 6.00117 17L6.00117 9.5C6.00117 8.94772 6.44888 8.5 7.00117 8.5ZM11.001 8.5C11.5533 8.5 12.001 8.94772 12.001 9.5V9.53513C12.5893 9.19479 13.2724 9 14.001 9C16.2101 9 18.001 10.7909 18.001 13V17C18.001 17.5523 17.5533 18 17.001 18C16.4487 18 16.001 17.5523 16.001 17V13C16.001 11.8954 15.1055 11 14.001 11C12.8964 11 12.001 11.8954 12.001 13V17C12.001 17.5523 11.5533 18 11.001 18C10.4487 18 10.001 17.5523 10.001 17L10.001 9.5C10.001 8.94772 10.4487 8.5 11.001 8.5Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer_card_copy">
-      <p>&copy; 2025 design by <a href="">Bigger Dream Innovation</a></p>
-      <!-- <div class="themes">
-        <span class="label">Changer le theme : </span>
-        <div class="theme_items">
-          <div class="theme" (click)="changeTheme('orange')"></div>
-          <div class="theme green" (click)="changeTheme('green')"></div>
-          <div class="theme blue" (click)="changeTheme('blue')"></div>
-        </div>
-      </div> -->
-    </div>
-  </div>
-</div>
+<app-footer/>

@@ -15,7 +15,7 @@
         <a routeLink="." fragment="home" class="link">Accueil</a>
         <a routerLink="." fragment="about" class="link">À propos</a>
         <a routerLink="/services" class="link">Services</a>
-        <a routerLink="/fuel-express" class="link">Fuel'Express</a>
+        <a routerLink="/fuel-express" class="link fuel_express">Fuel'Express</a>
         <a routerLink="/contact" routerLinkActive="active" class="link"
           >Contactez-nous</a
         >
@@ -26,16 +26,18 @@
       <div class="links">
         <a href="#home" fragment="home" class="link">Accueil</a>
         <a href="#about" fragment="about" class="link">À propos</a>
-        <a routerLink="/services"  class="link">Services</a>
+        <a routerLink="/services" class="link">Services</a>
+        <a routerLink="/fuel-express" class="link fuel_express">Fuel'Express</a>
+
         <a routerLink="/contact" routerLinkActive="active" class="link"
           >Contactez-nous</a
         >
       </div>
     }
 
-    <div class="link_contact">
+    <!-- <div class="link_contact">
       <a href="" class="link_btn"> Se connecter </a>
-    </div>
+    </div> -->
 
     <div class="toggle" (click)="openNav()">
       <button class="icon">
@@ -98,7 +100,7 @@
           <a href="#home" class="link">Accueil</a>
           <a href="#about" class="link">À propos</a>
           <a routerLink="/services" class="link">Services</a>
-          <a routerLink="/fuel-express" class="link">Fuel'Express</a>
+          <a routerLink="/fuel-express" class="link fuel_express">Fuel'Express</a>
           <a routerLink="/contact" routerLinkActive="active" class="link"
             >Contactez-nous</a
           >
@@ -109,17 +111,19 @@
         <div class="links">
           <a href="#home" fragment="home" class="link">Accueil</a>
           <a href="#about" fragment="about" class="link">À propos</a>
-          <a routerLink="/services" fragment="services" class="link">Services</a>
-          <a routerLink="/fuel-express" class="link">Fuel'Express</a>
+          <a routerLink="/services" fragment="services" class="link"
+            >Services</a
+          >
+          <a routerLink="/fuel-express" class="link fuel_express">Fuel'Express</a>
           <a routerLink="/contact" routerLinkActive="active" class="link"
             >Contactez-nous</a
           >
         </div>
       }
 
-      <div class="link_contact">
+      <!-- <div class="link_contact">
         <a href="" class="link_btn"> Se connecter </a>
-      </div>
+      </div> -->
     </div>
   </div>
 </nav>

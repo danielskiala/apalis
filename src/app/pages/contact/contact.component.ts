@@ -10,12 +10,13 @@ import { register, SwiperContainer } from 'swiper/element';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import { SwiperOptions } from 'swiper/types';
 import { NavComponent } from '../../components/nav/nav.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 register();
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [NavComponent],
+  imports: [NavComponent, FooterComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',

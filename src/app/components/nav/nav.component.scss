@@ -60,6 +60,11 @@
     text-decoration: underline;
     opacity: 1;
   }
+
+  &.fuel_express {
+    color: var(--green_second);
+    opacity: 1;
+  }
 }
 
 .link_contact {

@@ -11,6 +11,10 @@
     content: "";
     background: var(--banner_green);
   }
+
+  video {
+    object-fit: cover;
+  }
 }
 
 .banner_fuelexpress {
@@ -40,10 +44,15 @@
   @include flex;
   gap: 2rem;
 
+  &.section_smart_camion{
+    gap:3rem;
+  }
+
   &.fuel_app_pro {
     justify-content: space-between;
     align-items: center;
   }
+
   .fuel_text {
     width: 45%;
 
@@ -58,7 +67,15 @@
 
   .fuel_image {
     width: 55%;
-    border: 1px solid #f9f9f9;
+    &.smart_camion {
+      height: 420px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius:1rem;
+      }
+    }
   }
 
   .app_pro_image {
@@ -193,7 +210,7 @@
     }
 
     h3 {
-      font-size:3rem;
+      font-size: 3rem;
       font-family: "Raleway-Black";
       color: #2164b2;
     }
@@ -252,7 +269,7 @@
 @media screen and (max-width: 999px) {
   .banner {
     width: 100%;
-    height: 420px;
+    height: 340px;
   }
 
   .banner_fuelexpress {
@@ -284,6 +301,9 @@
 
     .fuel_image {
       width: 100%;
+      &.smart_camion {
+        height: 380px;
+      }
     }
 
     .fuel_app_feature_text {

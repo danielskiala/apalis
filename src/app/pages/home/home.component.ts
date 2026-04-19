@@ -11,12 +11,13 @@ import { NavComponent } from '../../components/nav/nav.component';
 import { register, SwiperContainer } from 'swiper/element';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import { SwiperOptions } from 'swiper/types';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { FooterComponent } from '../../components/footer/footer.component';
 register();
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavComponent],
+  imports: [NavComponent, FooterComponent, RouterLink],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

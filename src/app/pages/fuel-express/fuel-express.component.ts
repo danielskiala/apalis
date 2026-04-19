@@ -1,10 +1,11 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavComponent } from '../../components/nav/nav.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-fuel-express',
   standalone: true,
-  imports: [NavComponent],
+  imports: [NavComponent, FooterComponent],
   templateUrl: './fuel-express.component.html',
   styleUrl: './fuel-express.component.scss',
 })
