@@ -1,4 +1,5 @@
 @import "../../../assets/scss/mixins";
+@import "../../../assets/scss/variables";
 
 ::ng-deep {
   body {
@@ -42,10 +43,14 @@
   width: 100%;
   margin-top: 20px;
   @include flex;
-  gap: 2rem;
+  gap: 4rem;
 
-  &.section_smart_camion{
-    gap:3rem;
+  &.fluel_apps_content {
+    align-items: center;
+  }
+
+  &.section_smart_camion {
+    gap: 3rem;
   }
 
   &.fuel_app_pro {
@@ -69,11 +74,11 @@
     width: 55%;
     &.smart_camion {
       height: 420px;
-      img{
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius:1rem;
+        border-radius: 1rem;
       }
     }
   }
@@ -105,19 +110,19 @@
 .fuel_apps {
   @include flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 4rem;
   width: 50%;
   .fuel_app {
     @include flex;
-    flex-shrink: 0;
-    width: 48%;
-    gap: 1rem;
+    width: 100%;
+    gap: 1.6rem;
     .fuel_app_text {
-      width: 95%;
-      font-size: 1.4rem;
+      width: 70%;
+      font-size: 1.5rem;
       .name_app {
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-family: "Raleway-Bold";
+        margin-bottom: 1rem;
       }
     }
   }
@@ -149,26 +154,27 @@
 .fuel_express_pro {
   width: 100%;
   margin-top: -100px;
-  background: url("../../../assets/images/6.jpg");
-  background-size: cover;
-  background-position: center;
+  // background: url("../../../assets/images/6.jpg");
+  // background-size: cover;
+  // background-position: center;
+  background-color: var(--grey_second);
   position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.785);
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(0, 0, 0, 0.785);
+  // }
 
   .fuel_express_pro_content {
     @include flexCol;
     gap: 1.5rem;
     position: relative;
     z-index: 10;
-    color: var(--white_base);
+    color: var(--black_base);
   }
 
   .header {
@@ -193,6 +199,10 @@
     width: 60%;
     h1 {
       margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.6rem;
     }
   }
 }
@@ -281,6 +291,13 @@
     // background: url("../../../assets/images/banner.png") no-repeat;
     background-size: cover;
     background-position: center;
+  }
+
+  .about {
+    width: 100%;
+    .about_content {
+      flex-direction: column-reverse;
+    }
   }
 
   .title {
